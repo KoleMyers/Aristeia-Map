@@ -1,8 +1,9 @@
 L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
-let partyPosition = [];
 
 let viewZoom = localStorage.getItem('mapZoom') ?? initialZoom;
-let viewCenter = JSON.parse(localStorage.getItem('mapCenter') ?? JSON.stringify(mapCenter));
+// Use party position as center if available, otherwise fall back to mapCenter
+let partyPosition = JSON.parse(localStorage.getItem('partyPosition') ?? JSON.stringify(initialPartyPositionOnMap));
+let viewCenter = JSON.parse(localStorage.getItem('mapCenter') ?? JSON.stringify(partyPosition));
 
 // Creating the Map
 var map = L.map('map', { crs: L.CRS.Simple }).setView(viewCenter, viewZoom);
@@ -37,10 +38,9 @@ if (showLocationFinderMarker) {
   });
 }
 
-// Party position (saved to loalStorage for persistence)
+// Party position (saved to localStorage for persistence)
 if (showPartyMarker) {
-  const initialPartyPosition = JSON.parse(localStorage.getItem('partyPosition') ?? JSON.stringify(initialPartyPositionOnMap));
-  var partyMarker = L.marker(initialPartyPosition, {
+  var partyMarker = L.marker(partyPosition, {
     draggable: true, icon: L.AwesomeMarkers.icon({
       icon: "circle",
       markerColor: "blue",
