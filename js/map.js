@@ -43,10 +43,10 @@ if (showPartyMarker) {
   var partyMarker = L.marker(initialPartyPosition, {
     draggable: true, icon: L.AwesomeMarkers.icon({
       icon: "circle",
-      markerColor: "lightgreen",
+      markerColor: "blue",
     }),
   }).addTo(map);
-  partyMarker.bindPopup("You're here!");
+  partyMarker.bindPopup("Party");
   partyMarker.on('dragend', function (e) {
     partyCoordinates = partyMarker.getLatLng();
     partyPosition = [partyCoordinates.lat, partyCoordinates.lng];
