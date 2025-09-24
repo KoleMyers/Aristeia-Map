@@ -20,7 +20,7 @@ const lowestZoom = 1; // Lowest possible zoom
 const initialZoom = 4; // Initial zoom level when the map loads
 
 const mapCenter = [-128.3, 129.0]; // Coordinates for the center of the map
-const initialPartyPositionOnMap = [-128.3, 129.0];
+const initialPartyPositionOnMap = [-98.9, 118.5];
 
 const showPartyMarker = true; // Show the party marker, useful to get distances to other markers
 const showLocationFinderMarker = false; // Used to get the lat and long from the map, visualy, so it's easy to add coordinates to the CSV file
