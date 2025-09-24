@@ -1,0 +1,15 @@
+{
+  "name": "rpg-interactive-map",
+  "version": "1.0.0",
+  "description": "[[Preview]](https://taylorho.github.io/rpg-interactive-map/)",
+  "main": "variables.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}

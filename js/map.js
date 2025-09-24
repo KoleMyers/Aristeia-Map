@@ -1,7 +1,7 @@
 L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
 let partyPosition = [];
 
-let viewZoom = localStorage.getItem('mapZoom') ?? lowestZoom;
+let viewZoom = localStorage.getItem('mapZoom') ?? initialZoom;
 let viewCenter = JSON.parse(localStorage.getItem('mapCenter') ?? JSON.stringify(mapCenter));
 
 // Creating the Map
