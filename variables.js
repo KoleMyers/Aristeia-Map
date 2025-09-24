@@ -13,10 +13,10 @@ const locationsTitlesCSVFile = './location-titles.csv'; // Change to load the lo
 const mapFolder = './map'; // Load the map from a folder other han /map (remember to slice the map using maptiles)
 const nameOfTheMapOrPage = 'Aristeia'; // Name to be used as the title of the HTML page
 
-const biggestMapFolderZoom = 6; // Maximum folder level (eg. /map/6/)
+const biggestMapFolderZoom = 7; // Maximum folder level (eg. /map/6/)
 const shortestMapFolderZoom = 0; // Minimum folder level (eg. /map/1/)
 const biggestZoom = 5; // Maximum zoom level, if higher than biggestMapFolderZoom it will zoom in the image ignoring quality
-const lowestZoom = 0; // Lowest possible zoom
+const lowestZoom = 1; // Lowest possible zoom
 const initialZoom = 4; // Initial zoom level when the map loads
 
 const mapCenter = [-128.3, 129.0]; // Coordinates for the center of the map
