@@ -47,12 +47,12 @@ function getLayersGroupForOverlays(overlays, textTitles) {
     }
   }
 
-  if (textTitles.length > 0) {
-    newOverlay['Locations Titles'] = L.layerGroup(textTitles);
-    if (activeOverlays.includes('Locations Titles')) {
-      newOverlay['Locations Titles'].addTo(map);
-    }
-  }
+  // if (textTitles.length > 0) {
+  //   newOverlay['Locations Titles'] = L.layerGroup(textTitles);
+  //   if (activeOverlays.includes('Locations Titles')) {
+  //     newOverlay['Locations Titles'].addTo(map);
+  //   }
+  // }
 
   return newOverlay;
 }

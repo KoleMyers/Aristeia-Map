@@ -1,5 +1,5 @@
 const kilometerToMilesConstant = 0.6213712; // 1 km = 0.6213712 miles
-const sizeChangeFactor = 0.4; // Use to make distances longer (increasing this value) or shorter (decresing this value). Usefull for different map sizes.
+const sizeChangeFactor = 4.42; // Use to make distances longer (increasing this value) or shorter (decresing this value). Usefull for different map sizes.
 
 // Travel speeds from D&D (values in miles per hour)
 const travelSpeed = {
@@ -23,7 +23,7 @@ const mapCenter = [-128.3, 129.0]; // Coordinates for the center of the map
 const initialPartyPositionOnMap = [-98.9, 118.5];
 
 const showPartyMarker = true; // Show the party marker, useful to get distances to other markers
-const showLocationFinderMarker = false; // Used to get the lat and long from the map, visualy, so it's easy to add coordinates to the CSV file
+const showLocationFinderMarker = true; // Used to get the lat and long from the map, visualy, so it's easy to add coordinates to the CSV file
 const travelVelocityRulesLink = "https://roll20.net/compendium/dnd5e/Movement#content";
 
 const mapSouthWest = [-255, 0]; // Leave empty to remove map bounds, or add the value of for your map (use the showLocationFinderMarker if needed)
