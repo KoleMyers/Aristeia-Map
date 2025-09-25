@@ -39,19 +39,28 @@ if (showLocationFinderMarker) {
 }
 
 // Party position (saved to localStorage for persistence)
+let partyMarker = null;
+let partyMarkerLayer = null;
+
 if (showPartyMarker) {
-  var partyMarker = L.marker(partyPosition, {
+  partyMarker = L.marker(partyPosition, {
     draggable: true, icon: L.AwesomeMarkers.icon({
       icon: "circle",
       markerColor: "blue",
     }),
-  }).addTo(map);
+  });
   partyMarker.bindPopup("Party");
   partyMarker.on('dragend', function (e) {
     partyCoordinates = partyMarker.getLatLng();
     partyPosition = [partyCoordinates.lat, partyCoordinates.lng];
     localStorage.setItem('partyPosition', JSON.stringify(partyPosition));
   });
+  
+  // Create layer group for party marker
+  partyMarkerLayer = L.layerGroup([partyMarker]);
+  
+  // Add party marker to map initially
+  partyMarkerLayer.addTo(map);
 }
 
 // Distance Calculator

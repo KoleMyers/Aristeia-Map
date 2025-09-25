@@ -9,6 +9,11 @@
 
   let newOverlay = getLayersGroupForOverlays(overlays, textTitles);
 
+  // Add party marker layer if it exists
+  if (typeof partyMarkerLayer !== 'undefined' && partyMarkerLayer) {
+    newOverlay['<span class="marker blue">Party</span>'] = partyMarkerLayer;
+  }
+
   if (Object.keys(newOverlay).length !== 0) {
     L.control.layers(null, newOverlay).addTo(map);
   }
