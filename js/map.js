@@ -14,7 +14,7 @@ L.tileLayer(`${mapFolder}/{z}/{x}/{y}.png`, {
   maxZoom: biggestZoom, // Max zoom level, higher than maxNativeZoom, so when we go higher than maxNativeZoom, we just scale up the images on the map (providing a higher zoom)
   maxNativeZoom: biggestMapFolderZoom, // Maximum zoom level for /map/ folders
   minNativeZoom: shortestMapFolderZoom, // Minimum zoom level for /map/ folders
-  attribution: 'By <a href="https://github.com/TaylorHo" target="_blank">@TaylorHo</a> | <a href="https://github.com/TaylorHo/rpg-interactive-map" target="_blank">GitHub</a>'
+  // attribution: 'By <a href="https://github.com/TaylorHo" target="_blank">@TaylorHo</a> | <a href="https://github.com/TaylorHo/rpg-interactive-map" target="_blank">GitHub</a>'
 }).addTo(map);
 
 // Boundaries Variables
