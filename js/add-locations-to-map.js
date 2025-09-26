@@ -76,7 +76,20 @@ function getMarkersForOverlays(rows) {
       markerColor: overlayMarkerColor || "blue", // Available colors shown in js/plugins/awesome-markers/images/markers-soft@2x.png
     });
 
-    const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(`<b>${text}</b>`);
+    // Helper function to calculate days (same as in course plotter)
+function calculateDays(distanceInMiles, speedMph) {
+  const hoursPerDay = 8; // Maximum travel hours per day
+  const totalHours = distanceInMiles / speedMph;
+  const days = (totalHours / hoursPerDay).toFixed(1);
+  
+  if (days === "1.0") {
+    return "1 day";
+  } else {
+    return `${days} days`;
+  }
+}
+
+const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(`<b>${text}</b>`);
     marker.on('click', (e) => {
       const distanceToParty = (L.CRS.Simple.distance(partyMarker.getLatLng(), marker.getLatLng()) * sizeChangeFactor).toFixed(1); // It's in meters, but depending on the map this can look small, so in the below message we say it's in "Km"
       const distanceInMiles = (distanceToParty * kilometerToMilesConstant).toFixed(1);
@@ -87,9 +100,9 @@ function getMarkersForOverlays(rows) {
           <strong>Distance: ${distanceToParty} km</strong> (${distanceInMiles} miles) ${travelVelocityHtmlContent}<br/>
         </p>
         <p style="font-size: 0.9em;">
-          Traveling Fast: ${milesToHours(distanceInMiles, travelSpeed.fast)}<br/>
-          Traveling Normal: ${milesToHours(distanceInMiles, travelSpeed.normal)}<br/>
-          Traveling Slow: ${milesToHours(distanceInMiles, travelSpeed.slow)}
+          Traveling Fast: ${milesToHours(distanceInMiles, travelSpeed.fast)} (${calculateDays(distanceInMiles, travelSpeed.fast)})<br/>
+          Traveling Normal: ${milesToHours(distanceInMiles, travelSpeed.normal)} (${calculateDays(distanceInMiles, travelSpeed.normal)})<br/>
+          Traveling Slow: ${milesToHours(distanceInMiles, travelSpeed.slow)} (${calculateDays(distanceInMiles, travelSpeed.slow)})
           </p>
         <br/>
         ` : '<br/>';
