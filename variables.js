@@ -8,8 +8,8 @@ const travelSpeed = {
   fast: 4,
 };
 
-const locationsCSVFile = './locations.csv'; // Change to load the locations markers from a different file
-const locationsTitlesCSVFile = './location-titles.csv'; // Change to load the locations markers from a different file
+const locationsJSONFile = './locations.json'; // Change to load the locations markers from a different file
+const locationsTitlesJSONFile = './location-titles.json'; // Change to load the locations markers from a different file
 const mapFolder = './map'; // Load the map from a folder other han /map (remember to slice the map using maptiles)
 const nameOfTheMapOrPage = 'Aristeia'; // Name to be used as the title of the HTML page
 

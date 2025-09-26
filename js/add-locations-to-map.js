@@ -28,15 +28,13 @@
 })();
 
 async function getLocationTitles() {
-  return await fetch(locationsTitlesCSVFile).then(response => response.text()).then(async data => {
-    const rows = data.split('\n').slice(1).filter(row => row && row !== '');
-    return rows;
+  return await fetch(locationsTitlesJSONFile).then(response => response.json()).then(async data => {
+    return data;
   });
 }
 async function getLocationMarkers() {
-  return await fetch(locationsCSVFile).then(response => response.text()).then(async data => {
-    const rows = data.split('\n').slice(1).filter(row => row && row !== '');
-    return rows;
+  return await fetch(locationsJSONFile).then(response => response.json()).then(async data => {
+    return data;
   });
 }
 
@@ -65,11 +63,8 @@ function getLayersGroupForOverlays(overlays, textTitles) {
 function getMarkersForOverlays(rows) {
   let overlays = {}
 
-  for (const row of rows) {
-    const items = row.split(',');
-    const [category, overlayMarkerColor, lat, long, icon, text] = items;
-    let description = row.split(',').slice(6).join(',');
-    description = description.replace(/^"|"$/g, '');
+  for (const location of rows) {
+    const { category, overlayMarkerColor, lat, long, icon, text, description } = location;
 
     let iconToUse = L.AwesomeMarkers.icon({
       icon: icon || "circle",
@@ -131,9 +126,8 @@ const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(`<b>${text}<
 async function getTextsForOverlays(rows) {
   const locationNames = [];
 
-  for (const row of rows) {
-    const items = row.split(',');
-    const [title, lat, long, size] = items;
+  for (const location of rows) {
+    const { title, lat, long, size } = location;
 
     const fontSize = parseInt(size);
     const fontFamily = "IM Fell English SC";

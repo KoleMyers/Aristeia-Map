@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Area 1",
+    "lat": -126,
+    "long": 180,
+    "size": 100
+  },
+  {
+    "title": "Area 2",
+    "lat": -140,
+    "long": 75,
+    "size": 100
+  }
+]

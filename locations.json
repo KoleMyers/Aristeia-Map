@@ -1,0 +1,299 @@
+[
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -99.2,
+    "long": 118.6,
+    "icon": "crown",
+    "text": "Meletis",
+    "description": "The largest polis in Aristeia, a city-state of progressive thinkers, pious thaumaturges, and wise oracles. <a href='https://mtg.fandom.com/wiki/Meletis' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -83.5,
+    "long": 59.2,
+    "icon": "crown",
+    "text": "Akros",
+    "description": "A warrior polis high in the Katachthon Mountains, inspired by Sparta. The Akroans are known as the most feared warriors in Aristeia, living and dying by the spear in the name of countless kings. <a href='https://mtg.fandom.com/wiki/Akros' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -98.5,
+    "long": 171.4,
+    "icon": "crown",
+    "text": "Setessa",
+    "description": "A polis located in Melini's Nessian Forest, inspired by Themiscyra. Composed primarily of women and children, it is the favored polis of Karametra. Setessa encompasses a sprawling area with tree-like rings radiating from the Temple of Karametra at its heart. <a href='https://mtg.fandom.com/wiki/Setessa' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -20.0,
+    "long": 70.2,
+    "icon": "crown",
+    "text": "Skophos",
+    "description": "A labyrinthine city of the minotaurs in Aristeia, described as a dark reflection of Akros. The city is a maze carved from red sandstone, with homes, shops, fortresses, and temples built into the caverns' walls. <a href='https://mtg.fandom.com/wiki/Skophos' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -27.9,
+    "long": 171.9,
+    "icon": "crown",
+    "text": "Tethmos",
+    "description": "Tethmos is the primary leonin den and capital city of Oreskos. <a href='https://www.worldanvil.com/w/theros-chaoticus/a/tethmos-settlement' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -56.0,
+    "long": 230.8,
+    "icon": "crown",
+    "text": "Asphodel",
+    "description": "Built upon a necropolis in the Despair Lands, devoted to Phenax. Asphodel is a desolate city, a collection of decaying ruins, twisting alleyways, and crumbling facades. <a href='https://mtg.fandom.com/wiki/Asphodel' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -68.3,
+    "long": 191.9,
+    "icon": "crown",
+    "text": "Odunos",
+    "description": "More accepting of outsiders than Asphodel, Odunos is still a bleak city, but for those looking for dark magic and forbidden knowledge, Odunos may be the best start."
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -146.8,
+    "long": 173.6,
+    "icon": "crown",
+    "text": "Neolantin",
+    "description": "Though they are regarded as Meletians, the people of Neolantin view themselves as citizens of Olantin, a coastal polis that long ago vanished into the sea. According to legend, an angry Heliod smote the polis with his spear, sinking it in punishment for its people's utter hubris. The fact that the Neolantians were spared this fate, they say, is evidence of their humility, and they take special care in their sacrifices to Heliod. <a href='https://www.worldanvil.com/w/theros-homebrew-campaign-hekatenyx/a/neolantin-article' target='_blank'>Wiki</a>"
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -119.8,
+    "long": 101.1,
+    "icon": "crown",
+    "text": "Altrisos",
+    "description": "A Kraken that escaped its sealock once threatened the small seaside city of Altrisos. Recently weakened by a triton raid, the city had no defenses left and would be destroyed by an attack. The people prayed to Ephara, and the large image of her face on the city's wall came to life. The walls of the city grew impossibly high and strong, and the Kraken could do no more than dash its head against the impassable barrier. The monster soon returned to the ocean to find an easier meal. Altrisos now has Ephara's face on nearly every building and wall in the entire city in gratitude."
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -157.9,
+    "long": 64.1,
+    "icon": "crown",
+    "text": "Pytharis",
+    "description": "The Merchant Kings of Pytharis are a far cry from the warriors of Akros and the philosophers of Meletis. They are known for their cut-throat trade practices, and unlike the Akroans, they would choose gold over honor every time."
+  },
+  {
+    "category": "Cities",
+    "overlayMarkerColor": "red",
+    "lat": -199.9,
+    "long": 183.4,
+    "icon": "crown",
+    "text": "Thetis",
+    "description": "The great merfolk city of Aristeia, the majority of the city is located in the crystal-clear waters of its bay. On land the Tritons have been quick to take to the crafts of humans and elves, producing goods which are harder to procure from the ocean."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -105.7,
+    "long": 141.1,
+    "icon": "place-of-worship",
+    "text": "Oxus",
+    "description": "Oxus is a quiet town with a notably wealthy population, consisting largely of merchants who have retired from trade with large fortunes at their disposal. The tomb of Kynaios and Tiro stands in the center of the town, the subject of many local legends."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -122.4,
+    "long": 120.9,
+    "icon": "place-of-worship",
+    "text": "Glossion",
+    "description": "The small coastal town of Glossion boasts a remarkable library that according to local legend was a gift from Ephara. Other tales suggest that the library was founded by an ancient sage named Anatheia, but then a terrible fire destroyed the place, and along with it generations of collected knowledge. Once the people finished rebuilding the structure to start the library over, Ephara is said to have appeared and restored the books and scrolls the library had lost, copying the information from her scrolls of sacred knowledge. The bulk of the town's economy revolves around maintaining the library and meeting the needs of travelers who come to visit it."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -140.3,
+    "long": 140.9,
+    "icon": "place-of-worship",
+    "text": "Sitrium",
+    "description": "The coastal town of Sitrium is known for the way many of its buildings are on stilts to accommodate the changing tides. Sitrium is famed for its skilled shipwrights."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -151.8,
+    "long": 153.3,
+    "icon": "place-of-worship",
+    "text": "Natumbria",
+    "description": "The residents of Natumbria are famous for training sea animals as skillfully as Setessans train land and air animals. They train sea snakes, dolphins, and even sharks on a few occasions to be combatants, working animals, aquatic mounts, and companions."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -158.1,
+    "long": 204.8,
+    "icon": "place-of-worship",
+    "text": "Phaela",
+    "description": "A small fishing village, Phaela is most noted as being the literal 'end of the road' for travelers venturing south from Meletis. Yet for the easy-going locals, Phaela is the perfect place to enjoy the benefits of Meletian life without the politics."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -193.7,
+    "long": 130.0,
+    "icon": "place-of-worship",
+    "text": "Latchkey",
+    "description": "Piracy. No town is more associated with it in Aristeia than Latchkey. The beachside town is littered with sailors of every kind, and those who profit from them."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -163.9,
+    "long": 107.3,
+    "icon": "place-of-worship",
+    "text": "Therma",
+    "description": "A bustling tradeport and tourist destination. Therma is known for its hotsprings and thermal pools. Many travelers stop here to relax and recover from their journeys."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -171.6,
+    "long": 81.7,
+    "icon": "place-of-worship",
+    "text": "Brigen",
+    "description": "The hard-working town of Brigen is known for its prized cattle and grain. The cattle market in town draws traders from all over Aristeia."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -167.6,
+    "long": 67.0,
+    "icon": "place-of-worship",
+    "text": "Onux",
+    "description": "Situated along the banks of the Pynx river, and within a day's walk to the Silver Wood and the Syrion Mines, Onux is a thriving town of industry, though lacking the cultural extravagance of Pytharis."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -171.9,
+    "long": 42.8,
+    "icon": "place-of-worship",
+    "text": "Nausipoli",
+    "description": "An ancient town on the edge of the desert. Nausipoli is what's left of an ancient and proud desert kingdom."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -132.3,
+    "long": 38.5,
+    "icon": "place-of-worship",
+    "text": "Thesteia",
+    "description": "The humble fishing village of Thesteia is notable for its temple to Karametra. The site draws farmers from the region who offer a portion of their crops to the god of agriculture. It is also known as the birthplace of the hero Daphne, second only to Callaphe the Mariner in fame."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -108.6,
+    "long": 55.1,
+    "icon": "place-of-worship",
+    "text": "Pilea",
+    "description": "A town of stone masons, Pilea exports marble from the Lyssian Mine to the rest of Aristeia. For every statue of a god or goddess, there is a coin in the pocket of a Pilean."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -103.1,
+    "long": 73.7,
+    "icon": "place-of-worship",
+    "text": "Anopoli",
+    "description": "Smaller than Deyda Harbor, but no less vibrant. Anopoli is a port town responsible for most of Akros's agricultural trade."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -118.0,
+    "long": 79.6,
+    "icon": "place-of-worship",
+    "text": "Orithon",
+    "description": "A pilgrimage site for those wishing to consult the Oracles, Orithon is a town of true believers and charlatans in equal measure."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -77.1,
+    "long": 74.7,
+    "icon": "place-of-worship",
+    "text": "Deyda Harbor",
+    "description": "Deyda Harbor serves as the major trading hub between Akros and Meletis and, as such, the town reflects that duality with very distinct Meletian and Akroan Districts."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -50.7,
+    "long": 77.2,
+    "icon": "place-of-worship",
+    "text": "Krothis",
+    "description": "The Minotaurs of the Beastlands have no great love of the sea, yet even they know the importance of trade. Krothis is a bustling port of goblins, orcs, minotaurs, and any willing to overcome a natural aversion to water in the name of profit."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -32.8,
+    "long": 80.8,
+    "icon": "place-of-worship",
+    "text": "Grath",
+    "description": "A town of primarily Goblins, Grath is known for its famed Goblin shipwrights and sailors. Goblin architecture dominates the town, with a preference of speed over stability, entire neighborhoods may collapse overnight, only to be rebuilt in the following days."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -67.8,
+    "long": 121.9,
+    "icon": "place-of-worship",
+    "text": "Buckpoint",
+    "description": "Buckpoint is the last bastion of civilization on the Theanos Peninsula. Filled with pioneers, outlaws, and would-be adventurers, it is a town of opportunity or a town of last resort."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -79.8,
+    "long": 135.3,
+    "icon": "place-of-worship",
+    "text": "Krimnos",
+    "description": "Home of the famed philosopher Anapse. The village of Krimnos attracts many philosophers who share Anapse's delight in the pleasures of a simple life."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -48.5,
+    "long": 138.8,
+    "icon": "place-of-worship",
+    "text": "Derythos",
+    "description": "Home of the Lagonna Band of Centaurs. They are consistent allies of the leonin of Oreskos, and trade their wares especially to Meletis and Setessa."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -66.4,
+    "long": 162.6,
+    "icon": "place-of-worship",
+    "text": "Phoebe",
+    "description": "Built upon the bone cliffs of Tripolo, Phoebe is a small tightknit community of sheep herders, farmers, fishers, and all humble folk who work the land and sea."
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -20.8,
+    "long": 138.1,
+    "icon": "place-of-worship",
+    "text": "Lethys",
+    "description": "The Pheres Band centaur tribe of the Hornlands rarely build permanent settlements, but the fertile banks of lake Lethys were so frequently used as a campsite that its growth into a town was inevitable. Unlike the Lagonna, the Pheres rarely trade and are known as raiders, frequently clashing with the Lagonna to the South, and the orcs and goblins of the Vilthum mountains to the West."
+  }
+]
