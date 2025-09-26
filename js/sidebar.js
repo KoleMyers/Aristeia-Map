@@ -1,5 +1,5 @@
 var sidebar = L.control.sidebar('sidebar', {
-  position: 'left'
+  position: 'left',
 });
 
 map.addControl(sidebar);

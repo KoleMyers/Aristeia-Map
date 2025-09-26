@@ -27,7 +27,7 @@
 }
 
 .marker::before {
-  content: "⬤";
+  content: '⬤';
   line-height: 0;
 }
 

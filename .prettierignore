@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Map tiles (binary files)
+map/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Package files
+package-lock.json

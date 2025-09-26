@@ -2,7 +2,7 @@
   const [locationTitles, locationMarkers] = await Promise.all([
     getLocationTitles(),
     getLocationMarkers(),
-  ])
+  ]);
 
   let overlays = getMarkersForOverlays(locationMarkers);
   let textTitles = await getTextsForOverlays(locationTitles);
@@ -28,20 +28,26 @@
 })();
 
 async function getLocationTitles() {
-  return await fetch(locationsTitlesJSONFile).then(response => response.json()).then(async data => {
-    return data;
-  });
+  return await fetch(locationsTitlesJSONFile)
+    .then(response => response.json())
+    .then(async data => {
+      return data;
+    });
 }
 async function getLocationMarkers() {
-  return await fetch(locationsJSONFile).then(response => response.json()).then(async data => {
-    return data;
-  });
+  return await fetch(locationsJSONFile)
+    .then(response => response.json())
+    .then(async data => {
+      return data;
+    });
 }
 
 function getLayersGroupForOverlays(overlays, textTitles) {
   let newOverlay = {};
 
-  const activeOverlays = JSON.parse(localStorage.getItem('activeOverlays') ?? '[]');
+  const activeOverlays = JSON.parse(
+    localStorage.getItem('activeOverlays') ?? '[]'
+  );
   for (const key in overlays) {
     newOverlay[key] = L.layerGroup(overlays[key]);
 
@@ -61,36 +67,47 @@ function getLayersGroupForOverlays(overlays, textTitles) {
 }
 
 function getMarkersForOverlays(rows) {
-  let overlays = {}
+  let overlays = {};
 
   for (const location of rows) {
-    const { category, overlayMarkerColor, lat, long, icon, text, description } = location;
+    const { category, overlayMarkerColor, lat, long, icon, text, description } =
+      location;
 
     let iconToUse = L.AwesomeMarkers.icon({
-      icon: icon || "circle",
-      markerColor: overlayMarkerColor || "blue", // Available colors shown in js/plugins/awesome-markers/images/markers-soft@2x.png
+      icon: icon || 'circle',
+      markerColor: overlayMarkerColor || 'blue', // Available colors shown in js/plugins/awesome-markers/images/markers-soft@2x.png
     });
 
     // Helper function to calculate days (same as in course plotter)
-function calculateDays(distanceInMiles, speedMph) {
-  const hoursPerDay = 8; // Maximum travel hours per day
-  const totalHours = distanceInMiles / speedMph;
-  const days = (totalHours / hoursPerDay).toFixed(1);
-  
-  if (days === "1.0") {
-    return "1 day";
-  } else {
-    return `${days} days`;
-  }
-}
+    function calculateDays(distanceInMiles, speedMph) {
+      const hoursPerDay = 8; // Maximum travel hours per day
+      const totalHours = distanceInMiles / speedMph;
+      const days = (totalHours / hoursPerDay).toFixed(1);
 
-const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(`<b>${text}</b>`);
-    marker.on('click', (e) => {
-      const distanceToParty = (L.CRS.Simple.distance(partyMarker.getLatLng(), marker.getLatLng()) * sizeChangeFactor).toFixed(1); // It's in meters, but depending on the map this can look small, so in the below message we say it's in "Km"
-      const distanceInMiles = (distanceToParty * kilometerToMilesConstant).toFixed(1);
+      if (days === '1.0') {
+        return '1 day';
+      } else {
+        return `${days} days`;
+      }
+    }
 
-      const travelVelocityHtmlContent = travelVelocityRulesLink ? `| <a href="${travelVelocityRulesLink}" target="_blank">Rules</a>` : '';
-      const distancesHtmlContent = showPartyMarker ? `
+    const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(
+      `<b>${text}</b>`
+    );
+    marker.on('click', e => {
+      const distanceToParty = (
+        L.CRS.Simple.distance(partyMarker.getLatLng(), marker.getLatLng()) *
+        sizeChangeFactor
+      ).toFixed(1); // It's in meters, but depending on the map this can look small, so in the below message we say it's in "Km"
+      const distanceInMiles = (
+        distanceToParty * kilometerToMilesConstant
+      ).toFixed(1);
+
+      const travelVelocityHtmlContent = travelVelocityRulesLink
+        ? `| <a href="${travelVelocityRulesLink}" target="_blank">Rules</a>`
+        : '';
+      const distancesHtmlContent = showPartyMarker
+        ? `
         <p>
           <strong>Distance: ${distanceToParty} km</strong> (${distanceInMiles} miles) ${travelVelocityHtmlContent}<br/>
         </p>
@@ -100,7 +117,8 @@ const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(`<b>${text}<
           Traveling Slow: ${milesToHours(distanceInMiles, travelSpeed.slow)} (${calculateDays(distanceInMiles, travelSpeed.slow)})
           </p>
         <br/>
-        ` : '<br/>';
+        `
+        : '<br/>';
 
       sidebar.setContent(`
         <h1>${text}</h1>
@@ -130,12 +148,12 @@ async function getTextsForOverlays(rows) {
     const { title, lat, long, size } = location;
 
     const fontSize = parseInt(size);
-    const fontFamily = "IM Fell English SC";
+    const fontFamily = 'IM Fell English SC';
     const textPadding = 10;
 
     // Measure text width using a canvas
     const textWidth = (() => {
-      const canvas = document.createElement("canvas").getContext("2d");
+      const canvas = document.createElement('canvas').getContext('2d');
       canvas.font = `${fontSize}px ${fontFamily}`;
       return canvas.measureText(title).width;
     })();
@@ -164,7 +182,10 @@ async function getTextsForOverlays(rows) {
     `;
 
     const position = [parseFloat(lat), parseFloat(long)];
-    const bounds = [[position[0] - (svgHeight / 50), position[1] - (svgWidth / 50)], [position[0] + (svgHeight / 50), position[1] + (svgWidth / 50)]];
+    const bounds = [
+      [position[0] - svgHeight / 50, position[1] - svgWidth / 50],
+      [position[0] + svgHeight / 50, position[1] + svgWidth / 50],
+    ];
     const svgOverlay = L.svgOverlay(
       new DOMParser().parseFromString(element, 'image/svg+xml').documentElement,
       bounds
@@ -177,7 +198,9 @@ async function getTextsForOverlays(rows) {
 }
 
 function toggleOverlayOnLocalStorage(overlay) {
-  const activeOverlays = JSON.parse(localStorage.getItem('activeOverlays') ?? '[]');
+  const activeOverlays = JSON.parse(
+    localStorage.getItem('activeOverlays') ?? '[]'
+  );
 
   const overlayIndex = activeOverlays.indexOf(overlay);
 
