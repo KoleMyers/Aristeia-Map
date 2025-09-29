@@ -47,7 +47,7 @@
     "icon": "crown",
     "text": "Tethmos",
     "description": "Tethmos is the primary leonin den and capital city of Oreskos. <a href='https://www.worldanvil.com/w/theros-chaoticus/a/tethmos-settlement' target='_blank'>Wiki</a>",
-    "image": "Tethmos.jpg"
+    "image": "Tethmos.webp"
   },
   {
     "category": "Cities",
@@ -66,7 +66,8 @@
     "long": 191.9,
     "icon": "crown",
     "text": "Odunos",
-    "description": "More accepting of outsiders than Asphodel, Odunos is still a bleak city, but for those looking for dark magic and forbidden knowledge, Odunos may be the best start."
+    "description": "More accepting of outsiders than Asphodel, Odunos is still a bleak city, but for those looking for dark magic and forbidden knowledge, Odunos may be the best start.",
+    "image": "Odunos.png"
   },
   {
     "category": "Cities",
@@ -221,7 +222,8 @@
     "long": 55.1,
     "icon": "place-of-worship",
     "text": "Pilea",
-    "description": "A town of stone masons, Pilea exports marble from the Lyssian Mine to the rest of Aristeia. For every statue of a god or goddess, there is a coin in the pocket of a Pilean."
+    "description": "A town of stone masons, Pilea exports marble from the Lyssian Mine to the rest of Aristeia. For every statue of a god or goddess, there is a coin in the pocket of a Pilean.",
+    "image": "Pilea.png"
   },
   {
     "category": "Towns",
@@ -306,7 +308,8 @@
     "long": 162.6,
     "icon": "place-of-worship",
     "text": "Phoebe",
-    "description": "Built upon the bone cliffs of Tripolo, Phoebe is a small tightknit community of sheep herders, farmers, fishers, and all humble folk who work the land and sea."
+    "description": "Built upon the bone cliffs of Tripolo, Phoebe is a small tightknit community of sheep herders, farmers, fishers, and all humble folk who work the land and sea.",
+    "image": "Phoebe.png"
   },
   {
     "category": "Towns",
