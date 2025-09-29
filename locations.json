@@ -86,7 +86,8 @@
     "long": 101.1,
     "icon": "crown",
     "text": "Altrisos",
-    "description": "A Kraken that escaped its sealock once threatened the small seaside city of Altrisos. Recently weakened by a triton raid, the city had no defenses left and would be destroyed by an attack. The people prayed to Ephara, and the large image of her face on the city's wall came to life. The walls of the city grew impossibly high and strong, and the Kraken could do no more than dash its head against the impassable barrier. The monster soon returned to the ocean to find an easier meal. Altrisos now has Ephara's face on nearly every building and wall in the entire city in gratitude."
+    "description": "A Kraken that escaped its sealock once threatened the small seaside city of Altrisos. Recently weakened by a triton raid, the city had no defenses left and would be destroyed by an attack. The people prayed to Ephara, and the large image of her face on the city's wall came to life. The walls of the city grew impossibly high and strong, and the Kraken could do no more than dash its head against the impassable barrier. The monster soon returned to the ocean to find an easier meal. Altrisos now has Ephara's face on nearly every building and wall in the entire city in gratitude.",
+    "image": "Altrisos.png"
   },
   {
     "category": "Cities",
@@ -125,7 +126,8 @@
     "long": 120.9,
     "icon": "place-of-worship",
     "text": "Glossion",
-    "description": "The small coastal town of Glossion boasts a remarkable library that according to local legend was a gift from Ephara. Other tales suggest that the library was founded by an ancient sage named Anatheia, but then a terrible fire destroyed the place, and along with it generations of collected knowledge. Once the people finished rebuilding the structure to start the library over, Ephara is said to have appeared and restored the books and scrolls the library had lost, copying the information from her scrolls of sacred knowledge. The bulk of the town's economy revolves around maintaining the library and meeting the needs of travelers who come to visit it."
+    "description": "The small coastal town of Glossion boasts a remarkable library that according to local legend was a gift from Ephara. Other tales suggest that the library was founded by an ancient sage named Anatheia, but then a terrible fire destroyed the place, and along with it generations of collected knowledge. Once the people finished rebuilding the structure to start the library over, Ephara is said to have appeared and restored the books and scrolls the library had lost, copying the information from her scrolls of sacred knowledge. The bulk of the town's economy revolves around maintaining the library and meeting the needs of travelers who come to visit it.",
+    "image": "Glossion.png"
   },
   {
     "category": "Towns",
@@ -272,7 +274,8 @@
     "long": 80.8,
     "icon": "place-of-worship",
     "text": "Grath",
-    "description": "A town of primarily Goblins, Grath is known for its famed Goblin shipwrights and sailors. Goblin architecture dominates the town, with a preference of speed over stability, entire neighborhoods may collapse overnight, only to be rebuilt in the following days."
+    "description": "A town of primarily Goblins, Grath is known for its famed Goblin shipwrights and sailors. Goblin architecture dominates the town, with a preference of speed over stability, entire neighborhoods may collapse overnight, only to be rebuilt in the following days.",
+    "image": "Grath.jpg"
   },
   {
     "category": "Towns",
@@ -281,7 +284,8 @@
     "long": 121.9,
     "icon": "place-of-worship",
     "text": "Buckpoint",
-    "description": "Buckpoint is the last bastion of civilization on the Theanos Peninsula. Filled with pioneers, outlaws, and would-be adventurers, it is a town of opportunity or a town of last resort."
+    "description": "Buckpoint is the last bastion of civilization on the Theanos Peninsula. Filled with pioneers, outlaws, and would-be adventurers, it is a town of opportunity or a town of last resort.",
+    "image": "Buckpoint.png"
   },
   {
     "category": "Towns",
@@ -290,7 +294,8 @@
     "long": 135.3,
     "icon": "place-of-worship",
     "text": "Krimnos",
-    "description": "Home of the famed philosopher Anapse. The village of Krimnos attracts many philosophers who share Anapse's delight in the pleasures of a simple life."
+    "description": "Home of the famed philosopher Anapse. The village of Krimnos attracts many philosophers who share Anapse's delight in the pleasures of a simple life.",
+    "image": "Krimnos.png"
   },
   {
     "category": "Towns",
@@ -299,7 +304,8 @@
     "long": 138.8,
     "icon": "place-of-worship",
     "text": "Derythos",
-    "description": "Home of the Lagonna Band of Centaurs. They are consistent allies of the leonin of Oreskos, and trade their wares especially to Meletis and Setessa."
+    "description": "Home of the Lagonna Band of Centaurs. They are consistent allies of the leonin of Oreskos, and trade their wares especially to Meletis and Setessa.",
+    "image": "Derythos.png"
   },
   {
     "category": "Towns",
@@ -328,6 +334,7 @@
     "long": 222.4,
     "icon": "place-of-worship",
     "text": "Vallaki",
-    "description": "A lonesome port on the edge of the Hetos Mire. Vallaki is the gateway to Asphodel"
+    "description": "A dreary port on the edge of the Hetos Mire. Vallaki is the gateway to Asphodel, for those willing to dock.",
+    "image": "Vallaki.png"
   }
 ]
