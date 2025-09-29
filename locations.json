@@ -260,7 +260,8 @@
     "long": 77.2,
     "icon": "place-of-worship",
     "text": "Krothis",
-    "description": "The Minotaurs of the Beastlands have no great love of the sea, yet even they know the importance of trade. Krothis is a bustling port of goblins, orcs, minotaurs, and any willing to overcome a natural aversion to water in the name of profit."
+    "description": "The Minotaurs of the Beastlands have no great love of the sea, yet even they know the importance of trade. Krothis is a bustling port of goblins, orcs, minotaurs, and any willing to overcome a natural aversion to water in the name of profit.",
+    "image": "Krothis.jpg"
   },
   {
     "category": "Towns",
@@ -314,6 +315,16 @@
     "long": 138.1,
     "icon": "place-of-worship",
     "text": "Lethys",
-    "description": "The Pheres Band centaur tribe of the Hornlands rarely build permanent settlements, but the fertile banks of lake Lethys were so frequently used as a campsite that its growth into a town was inevitable. Unlike the Lagonna, the Pheres rarely trade and are known as raiders, frequently clashing with the Lagonna to the South, and the orcs and goblins of the Vilthum mountains to the West."
+    "description": "The Pheres Band centaur tribe of the Hornlands rarely build permanent settlements, but the fertile banks of lake Lethys were so frequently used as a campsite that its growth into a town was inevitable. Unlike the Lagonna, the Pheres rarely trade and are known as raiders, frequently clashing with the Lagonna to the South, and the orcs and goblins of the Vilthum mountains to the West.",
+    "image": "Lethys.jpg"
+  },
+  {
+    "category": "Towns",
+    "overlayMarkerColor": "lightblue",
+    "lat": -64.0,
+    "long": 222.4,
+    "icon": "place-of-worship",
+    "text": "Vallaki",
+    "description": "A lonesome port on the edge of the Hetos Mire. Vallaki is the gateway to Asphodel"
   }
 ]
