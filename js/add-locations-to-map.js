@@ -70,8 +70,16 @@ function getMarkersForOverlays(rows) {
   let overlays = {};
 
   for (const location of rows) {
-    const { category, overlayMarkerColor, lat, long, icon, text, description } =
-      location;
+    const {
+      category,
+      overlayMarkerColor,
+      lat,
+      long,
+      icon,
+      text,
+      description,
+      image,
+    } = location;
 
     let iconToUse = L.AwesomeMarkers.icon({
       icon: icon || 'circle',
@@ -120,8 +128,14 @@ function getMarkersForOverlays(rows) {
         `
         : '<br/>';
 
+      // Create image HTML if image is provided
+      const imageHtml = image
+        ? `<img src="./public/images/${image}" alt="${text}" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;" />`
+        : '';
+
       sidebar.setContent(`
         <h1>${text}</h1>
+        ${imageHtml}
         ${distancesHtmlContent}
         <strong>Description:</strong>
         <p>${description}</p>
