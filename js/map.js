@@ -60,9 +60,10 @@ if (showPartyMarker) {
   partyMarker = L.marker(partyPosition, {
     draggable: true,
     icon: L.AwesomeMarkers.icon({
-      icon: 'circle',
-      markerColor: 'blue',
+      icon: 'people-group',
+      markerColor: 'orange',
     }),
+    zIndexOffset: 1000, // Ensure party marker appears above other markers
   });
   partyMarker.bindPopup('Party');
   partyMarker.on('dragend', function (e) {
