@@ -196,7 +196,8 @@
     "long": 67.0,
     "icon": "place-of-worship",
     "text": "Onux",
-    "description": "Situated along the banks of the Pynx river, and within a day's walk to the Silver Wood and the Syrion Mines, Onux is a thriving town of industry, though lacking the cultural extravagance of Pytharis."
+    "description": "Situated along the banks of the Pynx river, and within a day's walk to the Silver Wood and the Syrion Mines, Onux is a thriving town of industry, though lacking the cultural extravagance of Pytharis.",
+    "image": "Onux.png"
   },
   {
     "category": "Towns",

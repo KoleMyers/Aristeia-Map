@@ -5,8 +5,8 @@
   "main": "variables.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx serve . --port 8075",
-    "serve": "npx serve . --port 8075",
+    "start": "npx serve . -p 8075",
+    "serve": "npx serve . -p 8075",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "format:js": "prettier --write \"**/*.js\"",

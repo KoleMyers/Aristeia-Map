@@ -18,5 +18,85 @@
     "text": "Beacon of Thalos",
     "description": "The lighthouse of Orychos is the largest in Aristeia, and its magical beacon can be seen for miles on even the foggiest of nights. While still named for it's original architect (277 BD), the current lighthouse was built in 314 PD after the original was destroyed by a raging Kraken.",
     "image": "/POIs/beacon_of_thalos.jpg"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -99.7,
+    "long": 125.8,
+    "icon": "star",
+    "text": "Mt. Heliandros",
+    "description": "The great temple of Heliod on the summit of Mt. Heliandros draws pilgrims from all over Aristeia. Every year on Midsummer, thousands of people make the ascent to the temple for days of feasting and celebration.",
+    "image": "/POIs/mt_heliandros.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -128.5,
+    "long": 64.3,
+    "icon": "star",
+    "text": "Tomb of Haktos & Perynes",
+    "description": "The famed warrior lovers of the Paramythi (Inspired by Achilles and Patroclus) were fittingly buried together. Their tale of bravery, love, pride, and fate embodies heroism in the hearts of the Aristeian people.",
+    "image": "/POIs/tomb_of_haktos_and_perynes.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -103.5,
+    "long": 60.9,
+    "icon": "star",
+    "text": "Tomb of Aristion",
+    "description": "Famed philospher, mathematician, biologist, and founder of the Dekatia in Meletis (39 BD), Aristion wished to be buried on his home isle of Panoxos. Unfortunately upon his death he was discovered to be massively in debt. He was originally buried in a public cemetery outside Meletis. It was said his ghost haunted the halls of the school he had founded for years, slamming doors and throwing books, before funds were raised to move his remains to honor his wishes. Though students still claim to have fallen asleep at their desk, waking to find their work marked with errors.",
+    "image": "/POIs/tomb_of_aristion.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -104.3,
+    "long": 101.2,
+    "icon": "star",
+    "text": "Colossus of Heracleon",
+    "description": "Built in the year 535PD, this imposing statue of Keranos hurling a lightning bolt was designed by the famed Pilean scultpor Heracleon after his house was destroyed by a storm. Now it stands watch over the Siren Sea as a testament to the power of the gods.",
+    "image": "/POIs/colossus_of_heracleon.jpg"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -160.8,
+    "long": 115.6,
+    "icon": "star",
+    "text": "Mt. Pyrros",
+    "description": "The Eruption of Mt. Pyrros in 79 AD was heard all across Aristeia, and its smoke darkened the skies for over a year. The city of Imbrus (Pompeii) was completely destroyed by the ash and lava. The volcano has since been dormant, but the people of Kalita make frequent offerings to Purphoros for protection.",
+    "image": "/POIs/mt_pyrros.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -140.7,
+    "long": 182.0,
+    "icon": "star",
+    "text": "Shrine Peak",
+    "description": "Another mountaintop, another temple. Shrine Peak is home to a great temple to Ephara, goddess of the polis. For many travelers though, it is simply the best view in Helletros.",
+    "image": "/POIs/shrine_peak.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -103.1,
+    "long": 226.1,
+    "icon": "star",
+    "text": "Priam",
+    "description": "Inspired by Troy. Priam and its famed walls are now a ruin. Attracting treasure hunters, scholars, thieves, and monsters, the famed city lives on in the minds of the Aristeian people as a symbol of adventure.",
+    "image": "/POIs/priam.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -76.5,
+    "long": 51.9,
+    "icon": "star",
+    "text": "Mt. Velus",
+    "description": "Visible from Akros, Mount Velus is an energetically active volcano. The fiery mountain is said to be Purphoros's home in the mortal world. While the volcano has only erupted a few times since Akros's founding, those minor catastrophes were enough to demonstrate that a major eruption might destroy the entire region. Akroans regularly leave offerings at the foot of the volcano, and rigorously dissuade travelers from venturing up to the sacred peak.",
+    "image": "/POIs/mt_velus.png"
   }
 ]

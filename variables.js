@@ -23,8 +23,8 @@ const mapCenter = [-128.3, 129.0]; // Coordinates for the center of the map
 const initialPartyPositionOnMap = [-98.9, 118.5];
 
 const showPartyMarker = true; // Show the party marker, useful to get distances to other markers
-const showLocationFinderMarker = true; // Used to get the lat and long from the map, visualy, so it's easy to add coordinates to the CSV file
-const showPOIs = false; // Show POIs layer - set to true to enable POIs
+const showLocationFinderMarker = false; // Used to get the lat and long from the map, visualy, so it's easy to add coordinates to the CSV file
+const showPOIs = true; // Show POIs layer - set to true to enable POIs
 const travelVelocityRulesLink = 'https://2e.aonprd.com/Rules.aspx?ID=2581';
 
 const mapSouthWest = [-255, 0]; // Leave empty to remove map bounds, or add the value of for your map (use the showLocationFinderMarker if needed)
