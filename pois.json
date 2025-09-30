@@ -1,0 +1,22 @@
+[
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -82.9,
+    "long": 78.2,
+    "icon": "star",
+    "text": "Eye of Akros",
+    "description": "The lighthouse of Akros marks the rocky waters off the Northern coast of Dedya Harbor.",
+    "image": "eye_of_akros.png"
+  },
+  {
+    "category": "POIs",
+    "overlayMarkerColor": "purple",
+    "lat": -109.5,
+    "long": 85.3,
+    "icon": "star",
+    "text": "Beacon of Thalos",
+    "description": "The lighthouse of Orychos is the largest in Aristeia, and its magical beacon can be seen for miles on even the foggiest of nights. While still named for it's original architect (277 BD), the current lighthouse was built in 314 PD after the original was destroyed by a raging Kraken.",
+    "image": "beacon_of_thalos.jpg"
+  }
+]

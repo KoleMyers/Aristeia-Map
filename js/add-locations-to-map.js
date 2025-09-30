@@ -1,11 +1,18 @@
 (async () => {
-  const [locationTitles, locationMarkers] = await Promise.all([
+  const [locationTitles, locationMarkers, poiMarkers] = await Promise.all([
     getLocationTitles(),
     getLocationMarkers(),
+    getPOIMarkers(),
   ]);
 
   let overlays = getMarkersForOverlays(locationMarkers);
   let textTitles = await getTextsForOverlays(locationTitles);
+
+  // Add POI overlays if POIs are enabled
+  if (showPOIs) {
+    const poiOverlays = getMarkersForOverlays(poiMarkers);
+    overlays = { ...overlays, ...poiOverlays };
+  }
 
   let newOverlay = getLayersGroupForOverlays(overlays, textTitles);
 
@@ -40,6 +47,19 @@ async function getLocationMarkers() {
     .then(async data => {
       return data;
     });
+}
+
+async function getPOIMarkers() {
+  try {
+    return await fetch('./pois.json')
+      .then(response => response.json())
+      .then(async data => {
+        return data;
+      });
+  } catch (error) {
+    console.log('POIs file not found or disabled');
+    return [];
+  }
 }
 
 function getLayersGroupForOverlays(overlays, textTitles) {
