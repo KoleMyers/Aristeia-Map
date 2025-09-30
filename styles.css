@@ -2,6 +2,10 @@
   color: #3d3ddf;
 }
 
+.orange::before {
+  color: #ffa500;
+}
+
 .lightblue::before {
   color: #95e5ff;
 }

@@ -18,7 +18,7 @@
 
   // Add party marker layer if it exists
   if (typeof partyMarkerLayer !== 'undefined' && partyMarkerLayer) {
-    newOverlay['<span class="marker blue">Party</span>'] = partyMarkerLayer;
+    newOverlay['<span class="marker orange">Party</span>'] = partyMarkerLayer;
   }
 
   if (Object.keys(newOverlay).length !== 0) {
