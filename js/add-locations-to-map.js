@@ -9,7 +9,8 @@
   let textTitles = await getTextsForOverlays(locationTitles);
 
   // Add POI overlays if POIs are enabled
-  if (showPOIs) {
+  const poiEnabled = typeof showPOIs !== 'undefined' ? showPOIs : false;
+  if (poiEnabled) {
     const poiOverlays = getMarkersForOverlays(poiMarkers);
     overlays = { ...overlays, ...poiOverlays };
   }
