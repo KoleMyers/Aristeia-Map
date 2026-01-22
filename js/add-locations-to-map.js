@@ -1,24 +1,25 @@
-(async () => {
+// Location markers module
+import L from 'leaflet';
+import * as config from '../variables.js';
+
+export async function initLocationMarkers(map, sidebar, partyMarker, partyMarkerLayer) {
   const [locationTitles, locationMarkers, poiMarkers] = await Promise.all([
     getLocationTitles(),
     getLocationMarkers(),
     getPOIMarkers(),
   ]);
 
-  let overlays = getMarkersForOverlays(locationMarkers);
+  let overlays = getMarkersForOverlays(locationMarkers, partyMarker, sidebar);
   let textTitles = await getTextsForOverlays(locationTitles);
 
-  // Add POI overlays if POIs are enabled
-  const poiEnabled = typeof showPOIs !== 'undefined' ? showPOIs : false;
-  if (poiEnabled) {
-    const poiOverlays = getMarkersForOverlays(poiMarkers);
+  if (config.showPOIs) {
+    const poiOverlays = getMarkersForOverlays(poiMarkers, partyMarker, sidebar);
     overlays = { ...overlays, ...poiOverlays };
   }
 
-  let newOverlay = getLayersGroupForOverlays(overlays, textTitles);
+  let newOverlay = getLayersGroupForOverlays(overlays, textTitles, map);
 
-  // Add party marker layer if it exists
-  if (typeof partyMarkerLayer !== 'undefined' && partyMarkerLayer) {
+  if (partyMarkerLayer) {
     newOverlay['<span class="marker orange">Party</span>'] = partyMarkerLayer;
   }
 
@@ -33,42 +34,35 @@
   map.on('overlayremove', function (e) {
     toggleOverlayOnLocalStorage(e.name);
   });
-})();
+}
 
 async function getLocationTitles() {
-  return await fetch(locationsTitlesJSONFile)
-    .then(response => response.json())
-    .then(async data => {
-      return data;
-    });
+  const response = await fetch(config.locationsTitlesJSONFile);
+  return response.json();
 }
+
 async function getLocationMarkers() {
-  return await fetch(locationsJSONFile)
-    .then(response => response.json())
-    .then(async data => {
-      return data;
-    });
+  const response = await fetch(config.locationsJSONFile);
+  return response.json();
 }
 
 async function getPOIMarkers() {
   try {
-    return await fetch('./pois.json')
-      .then(response => response.json())
-      .then(async data => {
-        return data;
-      });
+    const response = await fetch('./pois.json');
+    return response.json();
   } catch (error) {
     console.log('POIs file not found or disabled');
     return [];
   }
 }
 
-function getLayersGroupForOverlays(overlays, textTitles) {
+function getLayersGroupForOverlays(overlays, textTitles, map) {
   let newOverlay = {};
 
   const activeOverlays = JSON.parse(
     localStorage.getItem('activeOverlays') ?? '[]'
   );
+  
   for (const key in overlays) {
     newOverlay[key] = L.layerGroup(overlays[key]);
 
@@ -77,17 +71,10 @@ function getLayersGroupForOverlays(overlays, textTitles) {
     }
   }
 
-  // if (textTitles.length > 0) {
-  //   newOverlay['Locations Titles'] = L.layerGroup(textTitles);
-  //   if (activeOverlays.includes('Locations Titles')) {
-  //     newOverlay['Locations Titles'].addTo(map);
-  //   }
-  // }
-
   return newOverlay;
 }
 
-function getMarkersForOverlays(rows) {
+function getMarkersForOverlays(rows, partyMarker, sidebar) {
   let overlays = {};
 
   for (const location of rows) {
@@ -104,54 +91,42 @@ function getMarkersForOverlays(rows) {
 
     let iconToUse = L.AwesomeMarkers.icon({
       icon: icon || 'circle',
-      markerColor: overlayMarkerColor || 'blue', // Available colors shown in js/plugins/awesome-markers/images/markers-soft@2x.png
+      markerColor: overlayMarkerColor || 'blue',
     });
-
-    // Helper function to calculate days (same as in course plotter)
-    function calculateDays(distanceInMiles, speedMph) {
-      const hoursPerDay = 8; // Maximum travel hours per day
-      const totalHours = distanceInMiles / speedMph;
-      const days = (totalHours / hoursPerDay).toFixed(1);
-
-      if (days === '1.0') {
-        return '1 day';
-      } else {
-        return `${days} days`;
-      }
-    }
 
     const marker = L.marker([lat, long], { icon: iconToUse }).bindPopup(
       `<b>${text}</b>`
     );
-    marker.on('click', e => {
+    
+    marker.on('click', () => {
       const distanceToParty = (
         L.CRS.Simple.distance(partyMarker.getLatLng(), marker.getLatLng()) *
-        sizeChangeFactor
-      ).toFixed(1); // It's in meters, but depending on the map this can look small, so in the below message we say it's in "Km"
+        config.sizeChangeFactor
+      ).toFixed(1);
       const distanceInMiles = (
-        distanceToParty * kilometerToMilesConstant
+        distanceToParty * config.kilometerToMilesConstant
       ).toFixed(1);
 
-      const travelVelocityHtmlContent = travelVelocityRulesLink
-        ? `| <a href="${travelVelocityRulesLink}" target="_blank">Rules</a>`
+      const travelVelocityHtmlContent = config.travelVelocityRulesLink
+        ? `| <a href="${config.travelVelocityRulesLink}" target="_blank">Rules</a>`
         : '';
-      const distancesHtmlContent = showPartyMarker
+        
+      const distancesHtmlContent = config.showPartyMarker
         ? `
         <p>
           <strong>Distance: ${distanceToParty} km</strong> (${distanceInMiles} miles) ${travelVelocityHtmlContent}<br/>
         </p>
         <p style="font-size: 0.9em;">
-          Traveling Fast: ${milesToHours(distanceInMiles, travelSpeed.fast)} (${calculateDays(distanceInMiles, travelSpeed.fast)})<br/>
-          Traveling Normal: ${milesToHours(distanceInMiles, travelSpeed.normal)} (${calculateDays(distanceInMiles, travelSpeed.normal)})<br/>
-          Traveling Slow: ${milesToHours(distanceInMiles, travelSpeed.slow)} (${calculateDays(distanceInMiles, travelSpeed.slow)})
-          </p>
+          Traveling Fast: ${milesToHours(distanceInMiles, config.travelSpeed.fast)} (${calculateDays(distanceInMiles, config.travelSpeed.fast)})<br/>
+          Traveling Normal: ${milesToHours(distanceInMiles, config.travelSpeed.normal)} (${calculateDays(distanceInMiles, config.travelSpeed.normal)})<br/>
+          Traveling Slow: ${milesToHours(distanceInMiles, config.travelSpeed.slow)} (${calculateDays(distanceInMiles, config.travelSpeed.slow)})
+        </p>
         <br/>
         `
         : '<br/>';
 
-      // Create image HTML if image is provided
       const imageHtml = image
-        ? `<img src="./public/images/${image}" alt="${text}" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;" />`
+        ? `<img src="./images/${image}" alt="${text}" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px;" />`
         : '';
 
       sidebar.setContent(`
@@ -186,18 +161,15 @@ async function getTextsForOverlays(rows) {
     const fontFamily = 'IM Fell English SC';
     const textPadding = 10;
 
-    // Measure text width using a canvas
     const textWidth = (() => {
       const canvas = document.createElement('canvas').getContext('2d');
       canvas.font = `${fontSize}px ${fontFamily}`;
       return canvas.measureText(title).width;
     })();
 
-    // SVG dimensions
     const svgWidth = (textWidth + textPadding) * 2;
     const svgHeight = (fontSize + textPadding) * 2;
 
-    // Create the SVG string
     const element = `
       <svg viewBox="0 0 ${svgWidth} ${svgHeight}" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -251,6 +223,12 @@ function toggleOverlayOnLocalStorage(overlay) {
 function milesToHours(distance, speed) {
   const hours = Math.floor(distance / speed);
   const minutes = (parseFloat((distance / speed).toFixed(2)) - hours) * 60;
-
   return `${hours}h ${minutes.toFixed(0)} min`;
+}
+
+function calculateDays(distanceInMiles, speedMph) {
+  const hoursPerDay = 8;
+  const totalHours = distanceInMiles / speedMph;
+  const days = (totalHours / hoursPerDay).toFixed(1);
+  return days === '1.0' ? '1 day' : `${days} days`;
 }

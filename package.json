@@ -1,24 +1,25 @@
 {
-  "name": "rpg-interactive-map",
-  "version": "1.0.0",
-  "description": "[[Preview]](https://taylorho.github.io/rpg-interactive-map/)",
-  "main": "variables.js",
+  "name": "aristeia",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Interactive map for my Aristeia world",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx serve . -p 8075",
-    "serve": "npx serve . -p 8075",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "format:js": "prettier --write \"**/*.js\"",
-    "format:json": "prettier --write \"**/*.json\""
+    "format:check": "prettier --check ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Kole Myers",
   "license": "ISC",
   "dependencies": {
-    "serve": "^14.2.5"
+    "firebase": "^10.7.0",
+    "leaflet": "^1.9.4"
   },
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "vite": "^5.0.0",
+    "vite-plugin-static-copy": "^3.1.5"
   }
 }

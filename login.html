@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DM Login - Aristeia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  
+  <body>
+    <div class="login-container">
+      <div class="login-card">      
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input 
+              type="email" 
+              id="login-email" 
+              required 
+              placeholder="dm@example.com"
+              autocomplete="email"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input 
+              type="password" 
+              id="login-password" 
+              required 
+              placeholder="password"
+              autocomplete="current-password"
+            >
+          </div>
+          
+          <div id="login-error" class="login-error"></div>
+          
+          <button type="submit" class="login-submit-btn" id="login-btn">
+            <span id="login-btn-text">Sign In</span>
+            <span id="login-spinner" class="spinner" style="display: none;"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./js/login.js"></script>
+  </body>
+</html>
